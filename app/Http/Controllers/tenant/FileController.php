@@ -26,6 +26,10 @@ class FileController extends Controller
 
       $query = File::query();
 
+      if ($request->query('id')) {
+        $query->where('id', $request->query('id'));
+      }
+
       if ($request->query('name')) {
         $query->where('name', 'LIKE', "%{$request->query('name')}%");
       }
