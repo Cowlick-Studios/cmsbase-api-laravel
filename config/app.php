@@ -187,4 +187,6 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'request_limit' => env('REQUEST_PER_MIN_LIM', 60),
+
 ];
